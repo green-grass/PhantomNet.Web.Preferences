@@ -1,0 +1,7 @@
+{
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-PhantomNet.Web.Preferences.Sample-68337bd1-c333-42b5-9dab-ed2a2725d213;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}
