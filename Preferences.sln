@@ -11,11 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		NuGet.Config = NuGet.Config
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{40710D96-1171-43E1-BAD0-6961B45F1EEC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{40710D96-1171-43E1-BAD0-6961B45F1EEC}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PhantomNet.Web.Preferences", "src\PhantomNet.Web.Preferences\PhantomNet.Web.Preferences.xproj", "{90243E81-AC2F-4FBA-8091-269FEB67587B}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PhantomNet.Web.Preferences.Sample", "sample\PhantomNet.Web.Preferences.Sample\PhantomNet.Web.Preferences.Sample.xproj", "{12EBD743-E825-4613-B8C4-1C6F1F3EB66B}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PhantomNet.Web.Preferences.Sample", "samples\PhantomNet.Web.Preferences.Sample\PhantomNet.Web.Preferences.Sample.xproj", "{12EBD743-E825-4613-B8C4-1C6F1F3EB66B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
