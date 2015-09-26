@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNet.Hosting;
+using Microsoft.Dnx.Runtime;
 using Microsoft.Framework.Configuration;
-using Microsoft.Framework.Runtime;
 
 namespace PhantomNet.Web.Preferences
 {
     public static class Preferences
     {
-        public static IConfiguration Configuration { get; set; }
+        public static IConfigurationRoot Configuration { get; set; }
 
         #region Settings
 
@@ -124,7 +124,7 @@ namespace PhantomNet.Web.Preferences
 
         #endregion
 
-        public static IConfiguration Init(IHostingEnvironment env, IApplicationEnvironment appEnv)
+        public static IConfigurationRoot Init(IHostingEnvironment env, IApplicationEnvironment appEnv)
         {
             var builder = new ConfigurationBuilder(appEnv.ApplicationBasePath)
                 .AddJsonFile("config.json")

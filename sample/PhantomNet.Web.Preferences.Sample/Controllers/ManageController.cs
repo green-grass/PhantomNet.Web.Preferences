@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Security.Claims;
-using System.Security.Principal;
 using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
-using PhantomNet.Web.Preferences.Sample;
 using PhantomNet.Web.Preferences.Sample.Models;
 using PhantomNet.Web.Preferences.Sample.Services;
+using PhantomNet.Web.Preferences.Sample.ViewModels.Manage;
 
 namespace PhantomNet.Web.Preferences.Sample.Controllers
 {

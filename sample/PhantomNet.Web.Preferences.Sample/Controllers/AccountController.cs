@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
-using System.Security.Principal;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Authentication;
 using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Mvc.Rendering;
 using Microsoft.Data.Entity;
-using Microsoft.Data.Entity.Infrastructure;
-using PhantomNet.Web.Preferences.Sample;
 using PhantomNet.Web.Preferences.Sample.Models;
 using PhantomNet.Web.Preferences.Sample.Services;
+using PhantomNet.Web.Preferences.Sample.ViewModels.Account;
 
 namespace PhantomNet.Web.Preferences.Sample.Controllers
 {
@@ -446,7 +443,7 @@ namespace PhantomNet.Web.Preferences.Sample.Controllers
             if (!_databaseChecked)
             {
                 _databaseChecked = true;
-                context.Database.ApplyMigrations();
+                context.Database.Migrate();
             }
         }
 

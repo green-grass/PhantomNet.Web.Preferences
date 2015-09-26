@@ -1,20 +1,21 @@
 ﻿{
-  "version": "1.0.0-beta6",
+  "version": "3.0.0-beta7",
   "title": "PhantomNet Web Preferences",
   "description": "PhantomNet.Web.Preferences Class Library",
   "authors": [ "Minh Nguyen" ],
   "copyright": "MIT",
   "tags": [ "" ],
-  "projectUrl": "",
+  "projectUrl": "https://github.com/green-grass/Preferences",
   "licenseUrl": "",
 
   "dependencies": {
-    "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-beta6",
-    "Microsoft.Framework.Configuration.Abstractions": "1.0.0-beta6",
-    "Microsoft.Framework.Configuration.EnvironmentVariables": "1.0.0-beta6",
-    "Microsoft.Framework.Configuration.Json": "1.0.0-beta6",
-    "Microsoft.Framework.Configuration.UserSecrets": "1.0.0-beta6",
-    "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta6"
+    "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-beta7",
+    "Microsoft.Dnx.Runtime.Abstractions": "1.0.0-beta7",
+    "Microsoft.Framework.Configuration": "1.0.0-beta7",
+    "Microsoft.Framework.Configuration.Abstractions": "1.0.0-beta7",
+    "Microsoft.Framework.Configuration.EnvironmentVariables": "1.0.0-beta7",
+    "Microsoft.Framework.Configuration.Json": "1.0.0-beta7",
+    "Microsoft.Framework.Configuration.UserSecrets": "1.0.0-beta7"
   },
 
   "frameworks": {
