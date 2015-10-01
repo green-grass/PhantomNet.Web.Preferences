@@ -1,0 +1,10 @@
+{
+  "Site": {
+    "Name":  "PhantomNet Web Preferences Sample"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-PhantomNet.Web.Preferences.Sample-d74f8738-4a2e-4aab-9d33-a060f9fb0057;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}
