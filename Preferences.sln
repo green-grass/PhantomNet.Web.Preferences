@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{4071
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PhantomNet.Web.Preferences", "src\PhantomNet.Web.Preferences\PhantomNet.Web.Preferences.xproj", "{90243E81-AC2F-4FBA-8091-269FEB67587B}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PhantomNet.Web.Preferences.Sample", "samples\PhantomNet.Web.Preferences.Sample\PhantomNet.Web.Preferences.Sample.xproj", "{12EBD743-E825-4613-B8C4-1C6F1F3EB66B}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PhantomNet.Web.Preferences.Sample", "samples\PhantomNet.Web.Preferences.Sample\PhantomNet.Web.Preferences.Sample.xproj", "{8B19C36A-AC07-4FC0-8B88-ACFDC4C4F981}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,16 +27,16 @@ Global
 		{90243E81-AC2F-4FBA-8091-269FEB67587B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90243E81-AC2F-4FBA-8091-269FEB67587B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90243E81-AC2F-4FBA-8091-269FEB67587B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{12EBD743-E825-4613-B8C4-1C6F1F3EB66B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{12EBD743-E825-4613-B8C4-1C6F1F3EB66B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{12EBD743-E825-4613-B8C4-1C6F1F3EB66B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{12EBD743-E825-4613-B8C4-1C6F1F3EB66B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B19C36A-AC07-4FC0-8B88-ACFDC4C4F981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B19C36A-AC07-4FC0-8B88-ACFDC4C4F981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B19C36A-AC07-4FC0-8B88-ACFDC4C4F981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B19C36A-AC07-4FC0-8B88-ACFDC4C4F981}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{90243E81-AC2F-4FBA-8091-269FEB67587B} = {25EB38F9-06E6-4603-ADEA-2292819C1F87}
-		{12EBD743-E825-4613-B8C4-1C6F1F3EB66B} = {40710D96-1171-43E1-BAD0-6961B45F1EEC}
+		{8B19C36A-AC07-4FC0-8B88-ACFDC4C4F981} = {40710D96-1171-43E1-BAD0-6961B45F1EEC}
 	EndGlobalSection
 EndGlobal

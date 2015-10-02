@@ -1,152 +1,59 @@
-﻿using Microsoft.AspNet.Hosting;
-using Microsoft.Dnx.Runtime;
-using Microsoft.Framework.Configuration;
-
-namespace PhantomNet.Web.Preferences
+﻿namespace PhantomNet.Web.Preferences
 {
-    public static class Preferences
+    public class Preferences
     {
-        public static IConfigurationRoot Configuration { get; set; }
+        public string SiteName { get; set; }
 
-        #region Settings
+        public string FaviconVersion { get; set; }
 
-        public static string SiteName
+        public ContactSettings Contact { get; set; } = new ContactSettings();
+
+        public GoogleAnalyticsSettings GoogleAnalytics { get; set; } = new GoogleAnalyticsSettings();
+
+        public FacebookAppSettings FacebookApp { get; set; } = new FacebookAppSettings();
+
+        public SeoSettings Seo { get; set; } = new SeoSettings();
+    }
+
+    public class ContactSettings
+    {
+        public string Name { get; set; }
+
+        public string Email { get; set; }
+
+        public string EmailWithName
         {
             get
             {
-                return GetStringSetting("Site:Name");
+                return string.Format("{0}<{1}>", Name, Email);
             }
         }
 
-        public static string FaviconVersion
-        {
-            get
-            {
-                return GetStringSetting("Site:FaviconVersion");
-            }
-        }
+        public string EmailSubject { get; set; }
+    }
 
-        public static string CustomerServiceName
-        {
-            get
-            {
-                return GetStringSetting("Contact:CustomerServiceName");
-            }
-        }
+    public class GoogleAnalyticsSettings
+    {
+        public string Id { get; set; }
 
-        public static string CustomerServiceEmail
-        {
-            get
-            {
-                return GetStringSetting("Contact:CustomerServiceEmail");
-            }
-        }
+        public string Url { get; set; }
+    }
 
-        public static string CustomerServiceEmailWithName
-        {
-            get
-            {
-                return string.Format("{0}<{1}>", CustomerServiceName, CustomerServiceEmail);
-            }
-        }
+    public class FacebookAppSettings
+    {
+        public string AppId { get; set; }
 
-        public static string ContactEmailSubject
-        {
-            get
-            {
-                return GetStringSetting("Contact:EmailSubject");
-            }
-        }
+        public string AppSecret { get; set; }
+    }
 
-        public static string GoogleAnalyticsId
-        {
-            get
-            {
-                return GetStringSetting("GoogleAnalytics:Id");
-            }
-        }
+    public class SeoSettings
+    {
+        public string GooglePlusId { get; set; }
 
-        public static string GoogleAnalyticsUrl
-        {
-            get
-            {
-                return GetStringSetting("GoogleAnalytics:Url");
-            }
-        }
+        public string GeoRegion { get; set; }
 
-        public static string FacebookAppId
-        {
-            get
-            {
-                return GetStringSetting("Facebook:AppId");
-            }
-        }
+        public string GeoPosition { get; set; }
 
-        public static string FacebookAppSecret
-        {
-            get
-            {
-                return GetStringSetting("Facebook:AppSecret");
-            }
-        }
-
-        public static string GooglePlusId
-        {
-            get
-            {
-                return GetStringSetting("Seo:GooglePlusId");
-            }
-        }
-
-        public static string GeoRegion
-        {
-            get
-            {
-                return GetStringSetting("Seo:GeoRegion");
-            }
-        }
-
-        public static string GeoPosition
-        {
-            get
-            {
-                return GetStringSetting("Seo:GeoPosition");
-            }
-        }
-
-        public static string Icbm
-        {
-            get
-            {
-                return GetStringSetting("Seo:Icbm");
-            }
-        }
-
-        #endregion
-
-        public static IConfigurationRoot Init(IHostingEnvironment env, IApplicationEnvironment appEnv)
-        {
-            var builder = new ConfigurationBuilder(appEnv.ApplicationBasePath)
-                .AddJsonFile("config.json")
-                .AddJsonFile($"config.{env.EnvironmentName}.json", optional: true);
-
-            if (env.IsDevelopment())
-            {
-                builder.AddUserSecrets();
-            }
-            builder.AddEnvironmentVariables();
-            Configuration = builder.Build();
-            return Configuration;
-        }
-
-        #region Helpers
-
-        private static string GetStringSetting(string key)
-        {
-            try { return Configuration[key]; }
-            catch { return default(string); }
-        }
-
-        #endregion
+        public string Icbm { get; set; }
     }
 }

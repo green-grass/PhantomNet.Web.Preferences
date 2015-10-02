@@ -1,6 +1,6 @@
-{
+﻿{
   "webroot": "wwwroot",
-  "userSecretsId": "aspnet5-PhantomNet.Web.Preferences.Sample-d74f8738-4a2e-4aab-9d33-a060f9fb0057",
+  "userSecretsId": "aspnet5-PhantomNet.Web.Preferences.Sample-b60d0a07-84ba-4cde-951e-01c847544222",
   "version": "1.0.0-*",
 
   "dependencies": {

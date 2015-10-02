@@ -1,10 +1,14 @@
 {
-  "Site": {
-    "Name":  "PhantomNet Web Preferences Sample"
+  "Preferences": {
+    "SiteName": "PhantomNet Web Preferences Sample",
+    "Contact": {
+      "Name": "ABC",
+      "Email": "contact@abc.com"
+    }
   },
   "Data": {
     "DefaultConnection": {
-      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-PhantomNet.Web.Preferences.Sample-d74f8738-4a2e-4aab-9d33-a060f9fb0057;Trusted_Connection=True;MultipleActiveResultSets=true"
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-PhantomNet.Web.Preferences.Sample-b60d0a07-84ba-4cde-951e-01c847544222;Trusted_Connection=True;MultipleActiveResultSets=true"
     }
   }
 }

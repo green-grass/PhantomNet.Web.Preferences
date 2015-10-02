@@ -24,7 +24,20 @@ namespace PhantomNet.Web.Preferences.Sample
     {
         public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
         {
-            Configuration = Preferences.Init(env, appEnv);
+            // Setup configuration sources.
+
+            var builder = new ConfigurationBuilder(appEnv.ApplicationBasePath)
+                .AddJsonFile("config.json")
+                .AddJsonFile($"config.{env.EnvironmentName}.json", optional: true);
+
+            if (env.IsDevelopment())
+            {
+                // This reads the configuration keys from the secret store.
+                // For more details on using the user secret store see http://go.microsoft.com/fwlink/?LinkID=532709
+                builder.AddUserSecrets();
+            }
+            builder.AddEnvironmentVariables();
+            Configuration = builder.Build();
         }
 
         public IConfigurationRoot Configuration { get; set; }
@@ -32,6 +45,8 @@ namespace PhantomNet.Web.Preferences.Sample
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<Preferences>(Configuration.GetSection("Preferences"));
+
             // Add Entity Framework services to the services container.
             services.AddEntityFramework()
                 .AddSqlServer()
